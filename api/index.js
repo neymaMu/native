@@ -8,7 +8,7 @@ dotenv.config()
 
 const app = express()
 app.use(express.json()) 
-app.use(cors())
+app.use(cors({origin:"https://native-2.onrender.com",credentials:true}))
 
 mongoose.connect(process.env.MONGO)
 .then(() => console.log("db connect"))
